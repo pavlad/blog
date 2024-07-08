@@ -79,14 +79,9 @@ st.markdown("""
 
 st.write('\n')
 st.subheader("Projects")
-st.button('Transformer architecture from scratch with TensorFlow', use_container_width=True, type='primary')
+st.button('Transformer architecture from scratch in TensorFlow', use_container_width=True, type='primary')
 st.button('Named Entity Recognition with BERT', use_container_width=True, type='primary')
-st.button('Sentiment analysis with BERT', use_container_width=True, type='primary')
-
-
-# st.caption("""
-# #### With seven years of software engineering experience and a recent BSc in Data Science, I've developed a strong passion for machine learning, particularly in NLP. This site is my space to share my learnings and showcase my projects.
-# """)
+st.button('Topic modeling with BERTopic', use_container_width=True, type='primary')
 
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
