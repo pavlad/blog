@@ -25,7 +25,7 @@ hr {
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
-.viewerBadge_container__r5tak { display: none }
+.viewerBadge_container__r5tak { height: 0 }
 
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
