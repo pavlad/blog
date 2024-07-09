@@ -3,7 +3,6 @@ import requests
 import html
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 
 st.set_page_config(initial_sidebar_state='expanded')
 
@@ -22,11 +21,8 @@ DEFAULT_TEXT = f"""De Limburgse bedrijven exporteerden de voorbije 6 maanden sam
 (vrt.be)
 """
 
-# Load environment variables from .env file
-load_dotenv()
-
 # Retrieve the Hugging Face API key from environment variables
-HUGGINGFACE_KEY = os.getenv("HUGGINGFACE_KEY")
+HUGGINGFACE_KEY = st.secrets['HUGGINGFACE_KEY']
 
 # Define the API URL and headers
 API_URL = "https://api-inference.huggingface.co/models/pavlad/bert-finetuned-ner-nl-wiki"
