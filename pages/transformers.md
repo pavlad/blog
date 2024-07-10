@@ -1,4 +1,4 @@
-# Transformer from scratch
+# Transformer architecture from scratch
 
 # 1. Intro
 ## 1.1 Why transformers?
@@ -557,20 +557,20 @@ for (pt, en), en_labels in train_batches.take(1):
 
 We use the Adam optimizer with the same parameters as in the original *Attention is All You Need* paper.
 
-$$\text{learning_rate} = dimension_{model}^{-0.5} \cdot \min(\text{step_num}^{-0.5}, \text{step_num} \cdot \text{warmup_steps}^{-1.5})$$
+`learning_rate = (model_dimension^(-0.5)) * min(step_num^(-0.5), step_num * warmup_steps^(-1.5))`
 
 Where:
 
-- $\beta_1 = 0.9$
-- $\beta_2 = 0.98$
-- $\epsilon = 10^{-9}$
-- $\text{warmup_steps} = 4000$
+- `beta_1 = 0.9`
+- `beta_2 = 0.98`
+- `epsilon = 10^-9`
+- `warmup_steps = 4000`
 
 The idea behind the optimizer is that it will try to find the global minimum, and it's designed to adjust the learning rate based on the step number and its parameters.
 
-- $dimension_{model}^{-0.5}$ scales the learning rate based on the dimensionality of the input embeddings
-- $\text{step_num}^{-0.5}$ decreases the learning rate over time, trying to prevent overshooting the minimum
-- $\text{step_num} \cdot \text{warmup_steps}^{-1.5}$ initially starts the model with a small learning rate and then increases it over time
+- `dimension_model^-0.5` scales the learning rate based on the dimensionality of the input embeddings
+- `step_num^-0.5` decreases the learning rate over time, trying to prevent overshooting the minimum
+- `step_num * warmup_steps^-1.5` initially starts the model with a small learning rate and then increases it over time
 
 ```python
 class CustomSchedule(tf.keras.optimizers.schedules.LearningRateSchedule):

@@ -53,28 +53,28 @@ st.markdown(
 
 # Use the custom class for your text
 st.markdown("""
-<p class="custom-h2">With seven years of software engineering experience and a recent BSc in Data Science, I've developed a strong passion for machine learning, particularly in NLP. <br>This site is a space to share my learnings and showcase projects.</p>
+<p class="custom-h2">Hey, I'm a Belgian software engineer with seven years of experience and a recent BSc in Data Science. Over the years I've developed a strong passion for machine learning, particularly in NLP. <br>This site is a space to share my learnings and showcase projects.</p>
 """, unsafe_allow_html=True)
 
 st.write('\n')
-st.subheader("Projects")
-if st.button('Transformer architecture from scratch in TensorFlow', use_container_width=True, type='primary'):
-    st.switch_page("pages/Transformer from scratch in TF.py")
-if st.button('Named Entity Recognition with BERT', use_container_width=True, type='primary'):
-    st.switch_page("pages/NER demo.py")
-st.button('Topic modeling with BERTopic', use_container_width=True, type='primary')
+st.subheader("Articles")
+if st.button('Transformer architecture from scratch', type='primary'):
+    st.switch_page("pages/Transformer from scratch.py")
+if st.button('Named Entity Recognition with BERT', type='primary'):
+    st.switch_page("pages/NER with BERT demo.py")
+# st.button('Topic modeling with BERTopic', use_container_width=True, type='primary')
 
 # --- EXPERIENCE & QUALIFICATIONS ---
-st.write('\n')
-st.subheader("Background")
-st.write(
-    """
-- 7 years of experience as software engineer
-- BSc in Data Science
-- Proficient in NLP techniques and frameworks
-- Team player with strong sense of ownership
-"""
-)
+# st.write('\n')
+# st.subheader("Background")
+# st.write(
+#     """
+# - 7 years of experience as software engineer
+# - BSc in Data Science
+# - Proficient in NLP techniques and frameworks
+# - Team player with strong sense of ownership
+# """
+# )
 
 
 # --- SKILLS ---
@@ -82,7 +82,7 @@ st.write('\n')
 st.subheader("Skills")
 st.write("""
 - **Data Science**: Machine Learning (TensorFlow, Pandas, numpy, scikit-learn), NLP, linear regression, K-means, k-nearest-neighbors, data analysis (cleaning, modelling, visualisation)
-- **ML Engineering**: Docker Swarm, Kubernetes, SQL, NoSQL, ETL
+- **ML Engineering**: Docker Swarm, Kubernetes, SQL, NoSQL, ETL, AWS
 - **Software Engineering**: Python, R, Ruby, JavaScript, TypeScript, GraphQL, Git, APIs, CI/CD, object oriented programming, testing
 - **Languages**: Dutch, English, French, Russian
 """

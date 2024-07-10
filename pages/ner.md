@@ -31,7 +31,7 @@ In the past, neural network architectures like RNNs and LSTMs were often used fo
 What makes BERT so useful is its great understanding of language, which is obtained by pre-training the model on a large amount of data. This consists of two parts that happen simultaneously:
 
 <div align="center">
-<img src="https://miro.medium.com/v2/resize:fit:1270/1*i8zICfESnaGt4EVRcWBLKw.png" alt="drawing" width="400"/><br>
+<img src="https://cdn-images-1.medium.com/v2/resize:fit:1500/1*kfeGppXH6YrLIzt4t2NdBw.png" alt="drawing" width="400"/><br>
 Source: Renu Khanderwal
 </div><br>
 
@@ -45,7 +45,7 @@ My objective is to finetune a Dutch BERT model, [bert-base-dutch-cased](https://
 
 We can benefit from transfer learning by using an already existing BERT model, [bert-base-dutch-cased](https://huggingface.co/GroNLP/bert-base-dutch-cased), pre-trained by the University of Groningen. We can then attach a classification layer for the model to predict named entities, for which I'll use the [unimelb-nlp/wikiann](https://huggingface.co/datasets/unimelb-nlp/wikiann) dataset, which contains Dutch NER labels taken from Wikipedia. The dataset includes 20k training, 10k validation, and 10k test examples.
 
-Why Dutch? I speak Dutch, and I was interested in seeing how well the pretrained BERT models work.
+Why Dutch? I speak Dutch, and was interested in seeing how well the pretrained BERT models work.
 
 
 ## 2. Dataset

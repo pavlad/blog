@@ -21,4 +21,4 @@ markdown_content = read_markdown_file(f"{current_dir}/ner.md")
 st.markdown(markdown_content, unsafe_allow_html=True)
 
 if st.button("🤖 For a demo of the NER model, click here"):
-    st.switch_page("pages/NER demo.py")
+    st.switch_page("pages/NER with BERT demo.py")

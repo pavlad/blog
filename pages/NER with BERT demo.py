@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 import html
-import os
+import time
 from pathlib import Path
 
 st.set_page_config(initial_sidebar_state='expanded')
@@ -18,7 +18,7 @@ DEFAULT_TEXT = f"""De Limburgse bedrijven exporteerden de voorbije 6 maanden sam
 
 "Dat komt enerzijds door de dalende impact van de hoge energie- en grondstofprijzen", zegt Christine Thonnon, manager internationalisatie bij Voka Limburg. "Daarnaast merken we dat er weer meer vertrouwen is bij de ondernemers om aan verre export te doen. Daarbij kijken ze ook naar nieuwe markten om aan risicospreiding te doen."
 
-(vrt.be)
+(VRT)
 """
 
 # Retrieve the Hugging Face API key from environment variables
